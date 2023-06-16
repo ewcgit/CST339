@@ -11,6 +11,14 @@ import com.freshapples.model.LoginModel;
 
 import jakarta.validation.Valid;
 
+
+/*
+ * Login Controller directs the mapping for GET requests
+ * sent to the root URI and redirect to /dologin upon successful
+ * submission. Purpose is to log the user from the UserModel into 
+ * the application through validation in the database.
+ * 
+ * */
 @Controller
 @RequestMapping("/")
 public class LoginController {
@@ -39,9 +47,3 @@ public class LoginController {
 }
 
 
-//@PostMapping("/doLogin")
-//public String doLogin(LoginModel loginModel, BindingResult bindingResult, Model model) {
-//	System.out.println(String.format("Form with Username of %s and Password of %s", loginModel.getUsername(), loginModel.getPassword()));
-
-//	return "login";
-//}

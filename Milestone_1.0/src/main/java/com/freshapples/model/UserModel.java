@@ -1,5 +1,13 @@
 package com.freshapples.model;
 
+
+/*
+ * UserModel creates variables for pertinent information 
+ * needed from users. This information is populated through 
+ * the RegisterModel
+ * 
+ * */
+
 public class UserModel {
 	
 	private String firstName, lastName, phoneNum, emailAddress, username, password;

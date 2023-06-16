@@ -13,6 +13,14 @@ import com.freshapples.model.RegisterModel;
 
 import jakarta.validation.Valid;
 
+/*
+ * Class is a controller for /Register, /, /doRegister URLs. /Register is
+ * the root directive, / displays the model and creates a new RegisterModel.
+ *  /doRegister is called post submission to the / page, it validates the 
+ *  data and then submits it to a database 
+ * 
+ * */
+
 @Controller
 @RequestMapping("/Register")
 public class RegisterController {

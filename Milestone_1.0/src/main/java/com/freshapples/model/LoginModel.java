@@ -3,6 +3,12 @@ package com.freshapples.model;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+/*
+ * LoginModel validates and stores data used as the users
+ * login information
+ * 
+ * */
+
 public class LoginModel {
 
 	@NotNull(message="User name is a required field")
