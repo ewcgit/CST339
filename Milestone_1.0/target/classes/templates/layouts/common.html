@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Common Header Fragment -->
+<div th:fragment="header">
+	<div align="center">
+		<h1>IN PROGRESS FRESH APPLES APP</h1>
+	</div>
+	<div class="bs-example">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">{test}NAVBAR</a>
+			</div>
+			<div id="navbarCollapse" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/" >Home</a></li>
+					<li><a href="/" >Movies</a></li>
+					<li><a href="/" target="_blank">About Us</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">Start Page</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	
+	<h2 th:text="${title}">Default Message Text</h2><br/>
+	<img th:src="@{/images/gcu-logo.jpg}"/><br/><br/>
+</div>
+
+<div th:fragment="footer">
+	<h5 style="color:purple; text-align: center; position: fixed; bottom: 0; width: 100%;">Copyright 2020 Grand Canyon University</h5>
+</div>
+
+<div th:fragment="footer">
+	<h5 style="color: purple; text-align: center; position: fixed; bottom: 0; width: 100%;">Copyright 2020 Grand Canyon University</h5>
+</div>
+</body>
+</html>
