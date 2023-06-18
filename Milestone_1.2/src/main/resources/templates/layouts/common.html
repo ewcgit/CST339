@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Fresh Apples Login</title>
+<link href="/css/bootrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Common Header Fragment -->
+<div th:fragment="header">
+<center><img src="https://i.imgur.com/Fov0hj0.png" width="240" height="240"></center>
+	<body style="background-color:aquamarine;">
+	<div align="center">
+	</div>
+	<div class="bs-example">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">{test}NAVBAR</a>
+			</div>
+			<div id="navbarCollapse" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/home" >Home</a></li>
+					<li><a href="/home" >Movies</a></li>
+					<li><a href="/home" target="_blank">About Us</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">Start Page</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	
+	<h2 th:text="${title}">Default Message Text</h2><br/>
+</div>
+
+<div th:fragment="footer">
+	<h5 style="color:red; text-align: center; position: fixed; bottom: 0; width: 100%;">©2023 Fresh Apples</h5>
+</div>
+
+
+</body>
+</html>
