@@ -1,5 +1,7 @@
 package com.freshapples.model;
 
+import org.springframework.stereotype.Service;
+
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -10,6 +12,7 @@ import jakarta.validation.constraints.Size;
  * 
  * */
 
+@Service
 public class RegisterModel {
 	
 	@NotNull(message="First name is a required field")

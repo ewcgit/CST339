@@ -1,5 +1,8 @@
 package com.freshapples.model;
 
+import org.springframework.stereotype.Service;
+
+import com.freshapples.Application;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -8,7 +11,7 @@ import jakarta.validation.constraints.Size;
  * login information
  * 
  * */
-
+@Service
 public class LoginModel {
 
 	@NotNull(message="User name is a required field")
@@ -19,8 +22,15 @@ public class LoginModel {
 	@Size(min=1, max=32, message="Password must be between 1 and 32 characters")
 	private String password;
 	
-	
-	
+	public boolean validate() {
+		
+		for(UserModel i : Application.db.dataBase()) {
+			if(i.getUsername().equals(this.getUsername()) && i.getPassword().equals(this.getPassword()))
+				return true;
+		}
+
+		return false;
+	}
 
 	public String getUsername() {
 		return username;

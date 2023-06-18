@@ -1,6 +1,6 @@
 package com.freshapples.controller;
 
-import com.freshapples.model.DataBaseModel;
+import com.freshapples.Application;
 import com.freshapples.model.UserModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,10 +25,16 @@ import jakarta.validation.Valid;
 @RequestMapping("/Register")
 public class RegisterController {
 	
+	private RegisterModel registerModel;
+	
+	public RegisterController(RegisterModel registerModel) {
+		this.registerModel = registerModel;
+	}
+	
 	@GetMapping("/")
 	public String display(Model model) {
 		model.addAttribute("title", "Register Form");
-		model.addAttribute("registerModel", new RegisterModel());
+		model.addAttribute("registerModel", registerModel);
 		
 		return "register";
 	}
@@ -50,10 +56,7 @@ public class RegisterController {
 				registerModel.getPassword()
 				);
 		
-		//temp use until database is implemented and connected to DataBaseModel
-		DataBaseModel db = new DataBaseModel();
-		
-		db.addUser(user);
+		Application.db.addUser(user);
 
 		System.out.println(String.format("New Registration "
 				+ "with Username of %s, and Password of %s, First "
